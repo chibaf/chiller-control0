@@ -17,7 +17,7 @@ pythonの対話モードで
 
 0x7d
 
-## chillerの設定温度の取得
+## chillerの設定温度の取得: temp1.py on Raspberry Pi
 
 ＞＞＞ import serial
 

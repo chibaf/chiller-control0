@@ -31,6 +31,7 @@ while True:
       f.write(str(temps[0])+"\n")    
     print(str(temps[0]))      
     plt.clf()
+    plt.ylim(10,25)
     plt.plot(x,temps)
     plt.pause(0.1)
   except KeyboardInterrupt:

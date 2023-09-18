@@ -43,3 +43,4 @@ b'\x02S1    20.0\x03}'
 
 setting temp  20.0
 
+<img width="1349" alt="chiller-temp-plot" src="https://github.com/chibaf/chiller-control0/assets/1296728/8739af76-1340-439a-9f3a-435399b9fbb6">

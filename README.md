@@ -16,3 +16,13 @@ pythonの対話モードで
 ＞＞＞ hex(125)
 
 0x7d
+
+## chillerの設定温度の取得
+
+get_temp = b'\x04\x30\x30\x53\x31\x05'
+
+ser.write(get_temp)  # send command to the chiller for get temp setting
+
+line = ser.readline()  
+
+print(line)

@@ -13,13 +13,12 @@ ser = serial.Serial(
 
 if len(sys.argv) ==2: # open an output file as name=sys.argv[1]
   f = open(sys.argv[1], "w")
-temps=[0]*10
-x=range(0, 10, 1)
-request_00M1 = b'\x04\x30\x30\x4D\x31\x05'
+temps=[0]*20
+x=range(0, 20, 1)
+request_00M1 = b'\x04\x30\x30\x4D\x31\x05' # send chiller temp to raspberry pi
 while True:
   try:
-    ser.write(request_00M1)
-    time.sleep(1)
+    ser.write(request_00M1) # send chiller temp to raspberry pi
     line = ser.readline()  
     line2 = line.strip().decode("utf-8")
     line3 = line2.split( )    # split string

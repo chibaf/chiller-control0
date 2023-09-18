@@ -19,10 +19,15 @@ pythonの対話モードで
 
 ## chillerの設定温度の取得
 
-get_temp = b'\x04\x30\x30\x53\x31\x05'
-
-ser.write(get_temp)  # send command to the chiller for get temp setting
-
-line = ser.readline()  
-
-print(line)
+＞＞＞ import serial
+＞＞＞ ser = serial.Serial('/dev/ttyUSB0',9600,timeout=1)
+＞＞＞ get_temp = b'\x04\x30\x30\x53\x31\x05'
+＞＞＞ ser.write(get_temp)
+6
+＞＞＞ line = ser.readline() 
+＞＞＞ print(line)
+b'\x02S1    20.0\x03}'
+＞＞＞ line2 = line.strip().decode("utf-8")
+＞＞＞ b=line2.split()
+＞＞＞ print("setting temp ",b[1][:-1])
+setting temp  20.0

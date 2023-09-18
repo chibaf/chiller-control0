@@ -43,4 +43,6 @@ b'\x02S1    20.0\x03}'
 
 setting temp  20.0
 
+## real time plotting: real_time_plot_temp_from_chiller.py
+
 <img width="1349" alt="chiller-temp-plot" src="https://github.com/chibaf/chiller-control0/assets/1296728/8739af76-1340-439a-9f3a-435399b9fbb6">

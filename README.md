@@ -40,5 +40,6 @@ b'\x02S1    20.0\x03}'
 ＞＞＞ b=line2.split()
 
 ＞＞＞ print("setting temp ",b[1][:-1])
+
 setting temp  20.0
 

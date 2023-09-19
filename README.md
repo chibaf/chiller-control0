@@ -2,7 +2,7 @@
 
 # UART経由のchiller制御
 
-chiller-control program via UARL
+chiller-control program via UART
 
 <img width="740" alt="selecting2-chiller" src="https://github.com/chibaf/chiller_communcations/assets/1296728/8e1d3e94-d953-46b3-ae54-6b2bd1dc4fa9">
 
@@ -47,5 +47,11 @@ b'\x02S1    20.0\x03}'
 setting temp  20.0
 
 ## (3) real time plotting: real_time_plot_temp_from_chiller.py
+
+usage: python3 real_time_plot_temp_from_chiller.py
+
+or
+
+usage: python3 real_time_plot_temp_from_chiller.py filename.csv
 
 <img width="1349" alt="chiller-temp-plot" src="https://github.com/chibaf/chiller-control0/assets/1296728/8739af76-1340-439a-9f3a-435399b9fbb6">

@@ -11,7 +11,7 @@ else:
   x=float(sys.argv[1])  # get increment of temperature
 
 # get setting temperature
-get_temp = b'\x04\x30\x30\x53\x31\x05'
+get_temp = b'\x04\x32\x37\x53\x31\x05'
 ser.write(get_temp)  # send command to the chiller for get temp setting
 line = ser.readline()  
 print(line)
@@ -35,7 +35,7 @@ bcc=b1^e0^e1^e2^e3^0x03
 print(hex(bcc))
 
 # put new setting temperature to chiller
-set_temp=b'\x04\x30\x30\x02\x53\x31'+b'\x20\x20\x20\x20'+hex(ord(e[0])).encode()+hex(ord(e[1])).encode()+hex(ord(e[2])).encode()+hex(ord(e[3])).encode()+b'0x03'+hex(bcc).encode()
+set_temp=b'\x04\x32\x37\x02\x53\x31'+b'\x20\x20\x20\x20'+hex(ord(e[0])).encode()+hex(ord(e[1])).encode()+hex(ord(e[2])).encode()+hex(ord(e[3])).encode()+b'0x03'+hex(bcc).encode()
 print(set_temp)
 ser.write(set_temp)
 line = ser.readline()  
@@ -44,7 +44,7 @@ line2 = line.strip().decode("utf-8")
 print(line2) # return code from chiller
 
 # get setteing temperature of chiller
-get_temp = b'\x04\x30\x30\x53\x31\x05'
+get_temp = b'\x04\x32\x37\x53\x31\x05'
 print(get_temp)
 ser.write(get_temp)
 line = ser.readline()  
